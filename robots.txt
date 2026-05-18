@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# CHANGE_ME: раскомментируйте после создания sitemap.xml
+# Sitemap: https://example.ru/sitemap.xml
