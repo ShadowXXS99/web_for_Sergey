@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CHANGE_ME: при смене позиционирования обновите title и description под реальные услуги и географию -->
   <title>Аварийное вскрытие замков в СЗАО Москвы — выезд мастера 24/7</title>
   <meta name="description" content="Экстренное вскрытие замков, дверей, авто и сейфов в СЗАО Москвы: Митино, Тушино, Строгино, Щукино и другие районы. Круглосуточный выезд мастера, работа по документам.">
   <meta name="robots" content="index,follow">
   <!-- CHANGE_ME: замените example.ru на реальный домен сайта -->
-  <link rel="canonical" href="https://example.ru/">
+  <link rel="canonical" href="https://example.ru/vskrytie-zamkov-szao/">
   <meta property="og:title" content="Аварийное вскрытие замков в СЗАО Москвы — выезд мастера 24/7">
   <meta property="og:description" content="Вскрытие дверей, авто, сейфов и гаражей в районах СЗАО Москвы. Аккуратная работа после подтверждения права доступа.">
   <meta property="og:type" content="website">
@@ -16,16 +17,16 @@
   <link rel="preload" href="img/hero-lock.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- CHANGE_ME: вставьте реальный ID счетчика Яндекс.Метрики вместо 00000000 -->
+  <!-- CHANGE_ME: вставьте реальный ID счетчика Яндекс.Метрики вместо 0 -->
   <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
     for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(00000000, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:false });
+    ym(0, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:false });
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/00000000" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/0" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
   <!--
   CHANGE_ME: шаблон JSON-LD. Перед публикацией замените placeholders или удалите блок.
@@ -37,8 +38,7 @@
     "telephone": "+7-999-000-00-00",
     "email": "mail@example.ru",
     "areaServed": "СЗАО Москвы",
-    "url": "https://example.ru/",
-    "priceRange": "от {{PRICE_FROM}}"
+    "url": "https://example.ru/vskrytie-zamkov-szao/"
   }
   </script>
   -->
@@ -54,9 +54,9 @@
       </a>
       <nav class="site-header__nav" aria-label="Основная навигация">
         <a class="site-header__nav-link" href="#services">Услуги</a>
-        <a class="site-header__nav-link" href="#prices">Цены</a>
         <a class="site-header__nav-link" href="#areas">Районы</a>
         <a class="site-header__nav-link" href="#lead-form">Заявка</a>
+        <a class="site-header__nav-link" href="#faq">FAQ</a>
       </nav>
       <div class="site-header__actions">
         <a class="site-header__phone js-phone-link" href="tel:+79990000000">+7 (999) 000-00-00</a>
@@ -74,9 +74,9 @@
           <p class="hero__lead">Круглосуточный выезд мастера 24/7. Работаем аккуратно и только при подтверждении права доступа.</p>
           <ul class="hero__badges" aria-label="Ключевые условия">
             <li class="hero__badge">24/7</li>
-            <li class="hero__badge">оперативный выезд</li>
-            <li class="hero__badge">работа по документам</li>
-            <li class="hero__badge">цены от {{PRICE_FROM}}</li>
+            <li class="hero__badge">СЗАО Москвы</li>
+            <li class="hero__badge">по документам</li>
+            <li class="hero__badge">оценка до работ</li>
           </ul>
           <div class="hero__actions">
             <a class="button button--primary js-phone-link" href="tel:+79990000000">Позвонить мастеру</a>
@@ -93,39 +93,39 @@
     <section class="benefits section">
       <div class="container">
         <div class="section__head">
-          <p class="section__eyebrow">Почему вызывают нас</p>
-          <h2 class="section__title">Аккуратный сервис без лишних обещаний</h2>
+          <p class="section__eyebrow">Почему выбирают именно нас</p>
+          <h2 class="section__title">Понятный порядок работы и аккуратный подход</h2>
         </div>
         <div class="benefits__grid">
           <article class="benefit-card">
-            <img class="benefit-card__icon" src="img/icon-clock.svg" width="44" height="44" loading="lazy" alt="">
+            <img class="benefit-card__image" src="img/photos/benefit-night.jpg" width="360" height="210" loading="lazy" alt="Ночной выезд мастера по вскрытию замка">
             <h3 class="benefit-card__title">Круглосуточный выезд</h3>
             <p class="benefit-card__text">Принимаем заявки днем, ночью, в выходные и праздники.</p>
           </article>
           <article class="benefit-card">
-            <img class="benefit-card__icon" src="img/icon-map.svg" width="44" height="44" loading="lazy" alt="">
+            <img class="benefit-card__image" src="img/photos/benefit-area.jpg" width="360" height="210" loading="lazy" alt="Мастер выезжает на заявку по СЗАО Москвы">
             <h3 class="benefit-card__title">Работаем по СЗАО</h3>
             <p class="benefit-card__text">Выезжаем в Митино, Тушино, Строгино, Щукино и соседние районы.</p>
           </article>
           <article class="benefit-card">
-            <img class="benefit-card__icon" src="img/icon-shield.svg" width="44" height="44" loading="lazy" alt="">
-            <h3 class="benefit-card__title">Аккуратное вскрытие</h3>
-            <p class="benefit-card__text">Подбираем способ по типу замка и состоянию двери.</p>
-          </article>
-          <article class="benefit-card">
-            <img class="benefit-card__icon" src="img/icon-price.svg" width="44" height="44" loading="lazy" alt="">
+            <img class="benefit-card__image" src="img/photos/benefit-estimate.jpg" width="360" height="210" loading="lazy" alt="Мастер осматривает замок перед началом работ">
             <h3 class="benefit-card__title">Оценка до начала работ</h3>
-            <p class="benefit-card__text">Стоимость уточняется до вскрытия, без скрытых действий.</p>
+            <p class="benefit-card__text">Мастер объясняет порядок работ и согласует действия до вскрытия.</p>
           </article>
           <article class="benefit-card">
-            <img class="benefit-card__icon" src="img/icon-shield.svg" width="44" height="44" loading="lazy" alt="">
-            <h3 class="benefit-card__title">Проверяем право доступа</h3>
-            <p class="benefit-card__text">Мастер приступает к работе после подтверждения документов.</p>
+            <img class="benefit-card__image" src="img/photos/benefit-docs.jpg" width="360" height="210" loading="lazy" alt="Проверка документов перед аварийным вскрытием">
+            <h3 class="benefit-card__title">Работаем по документам</h3>
+            <p class="benefit-card__text">Приступаем к работе только после подтверждения права доступа.</p>
           </article>
           <article class="benefit-card">
-            <img class="benefit-card__icon" src="img/icon-call.svg" width="44" height="44" loading="lazy" alt="">
-            <h3 class="benefit-card__title">Консультация по замку</h3>
-            <p class="benefit-card__text">Подскажем, нужен ли ремонт, замена личинки или новый замок.</p>
+            <img class="benefit-card__image" src="img/photos/benefit-careful.jpg" width="360" height="210" loading="lazy" alt="Аккуратная работа с дверным замком">
+            <h3 class="benefit-card__title">Аккуратное вскрытие</h3>
+            <p class="benefit-card__text">Подбираем способ по типу замка, состоянию двери и ситуации.</p>
+          </article>
+          <article class="benefit-card">
+            <img class="benefit-card__image" src="img/photos/benefit-repair.jpg" width="360" height="210" loading="lazy" alt="Замена личинки замка после вскрытия">
+            <h3 class="benefit-card__title">Поможем с заменой</h3>
+            <p class="benefit-card__text">Подскажем, нужен ли ремонт, замена личинки или установка нового замка.</p>
           </article>
         </div>
       </div>
@@ -138,79 +138,67 @@
           <h2 class="section__title">Какие замки и двери открываем</h2>
         </div>
         <div class="services__grid">
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-shield.svg" width="42" height="42" loading="lazy" alt="">
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-door-1.jpg" width="320" height="210" loading="lazy" alt="Вскрытие входной двери">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-door-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
             <h3 class="service-card__title">Вскрытие входных дверей</h3>
             <p class="service-card__text">Помогаем при потере ключей, поломке механизма или захлопнутой двери.</p>
           </article>
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-shield.svg" width="42" height="42" loading="lazy" alt="">
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-room-1.jpg" width="320" height="210" loading="lazy" alt="Вскрытие межкомнатной двери">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-room-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
             <h3 class="service-card__title">Вскрытие межкомнатных дверей</h3>
             <p class="service-card__text">Открываем бытовые защелки и ручки с учетом состояния полотна.</p>
           </article>
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-map.svg" width="42" height="42" loading="lazy" alt="">
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-auto-1.jpg" width="320" height="210" loading="lazy" alt="Вскрытие автомобиля">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-auto-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
             <h3 class="service-card__title">Вскрытие автомобилей</h3>
             <p class="service-card__text">Работаем при запертых ключах и сбоях замка после проверки документов.</p>
           </article>
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-price.svg" width="42" height="42" loading="lazy" alt="">
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-safe-1.jpg" width="320" height="210" loading="lazy" alt="Вскрытие сейфа">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-safe-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
             <h3 class="service-card__title">Вскрытие сейфов</h3>
             <p class="service-card__text">Оцениваем тип сейфа и подбираем способ открытия по ситуации.</p>
           </article>
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-map.svg" width="42" height="42" loading="lazy" alt="">
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-garage-1.jpg" width="320" height="210" loading="lazy" alt="Вскрытие гаражного замка">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-garage-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
             <h3 class="service-card__title">Вскрытие гаражей</h3>
             <p class="service-card__text">Помогаем с навесными, врезными и гаражными замками.</p>
           </article>
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-price.svg" width="42" height="42" loading="lazy" alt="">
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-cylinder-1.jpg" width="320" height="210" loading="lazy" alt="Замена личинки и дверного замка">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-cylinder-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
             <h3 class="service-card__title">Замена личинки и замков</h3>
             <p class="service-card__text">Меняем цилиндры и замки после вскрытия или при износе механизма.</p>
           </article>
-          <article class="service-card">
-            <img class="service-card__icon" src="img/icon-call.svg" width="42" height="42" loading="lazy" alt="">
-            <h3 class="service-card__title">Ремонт замка после вскрытия</h3>
+          <article class="service-card service-card--photo">
+            <div class="service-card__media">
+              <img class="service-card__image" src="img/photos/service-repair-1.jpg" width="320" height="210" loading="lazy" alt="Ремонт замка после вскрытия">
+              <img class="service-card__image service-card__image--alt" src="img/photos/service-repair-2.jpg" width="320" height="210" loading="lazy" alt="">
+            </div>
+            <h3 class="service-card__title">Ремонт/замена замка после вскрытия</h3>
             <p class="service-card__text">Если механизм можно восстановить, мастер предложит ремонт на месте.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="prices section section--tint" id="prices">
-      <div class="container">
-        <div class="section__head">
-          <p class="section__eyebrow">Стоимость</p>
-          <h2 class="section__title">Цены на вскрытие и замену замков</h2>
-        </div>
-        <!-- CHANGE_ME: замените placeholders на реальные цены после согласования прайса -->
-        <div class="price-list" role="table" aria-label="Ориентировочные цены">
-          <div class="price-list__row" role="row">
-            <div class="price-list__service" role="cell">Вскрытие дверного замка</div>
-            <div class="price-list__value" role="cell">от {{PRICE_DOOR}}</div>
-          </div>
-          <div class="price-list__row" role="row">
-            <div class="price-list__service" role="cell">Вскрытие автомобиля</div>
-            <div class="price-list__value" role="cell">от {{PRICE_AUTO}}</div>
-          </div>
-          <div class="price-list__row" role="row">
-            <div class="price-list__service" role="cell">Вскрытие сейфа</div>
-            <div class="price-list__value" role="cell">от {{PRICE_SAFE}}</div>
-          </div>
-          <div class="price-list__row" role="row">
-            <div class="price-list__service" role="cell">Вскрытие гаража</div>
-            <div class="price-list__value" role="cell">от {{PRICE_GARAGE}}</div>
-          </div>
-          <div class="price-list__row" role="row">
-            <div class="price-list__service" role="cell">Замена личинки / замка</div>
-            <div class="price-list__value" role="cell">от {{PRICE_REPLACE}}</div>
-          </div>
-        </div>
-        <p class="prices__note">Окончательная стоимость зависит от типа замка, сложности, состояния двери или механизма. Информация на сайте справочная; при необходимости мастер уточняет цену до начала работ.</p>
-      </div>
-    </section>
-
-    <section class="areas section" id="areas">
+    <section class="areas section section--tint" id="areas">
       <div class="container">
         <div class="section__head">
           <p class="section__eyebrow">География</p>
@@ -229,7 +217,7 @@
       </div>
     </section>
 
-    <section class="workflow section section--tint">
+    <section class="workflow section">
       <div class="container">
         <div class="section__head">
           <p class="section__eyebrow">Порядок работы</p>
@@ -243,24 +231,24 @@
           </li>
           <li class="workflow__item">
             <span class="workflow__number">2</span>
-            <h3 class="workflow__title">Уточнение адреса</h3>
+            <h3 class="workflow__title">Уточняем адрес и ситуацию</h3>
             <p class="workflow__text">Мастер уточняет район, тип замка и ориентировочную сложность.</p>
           </li>
           <li class="workflow__item">
             <span class="workflow__number">3</span>
-            <h3 class="workflow__title">Выезд мастера</h3>
+            <h3 class="workflow__title">Мастер выезжает</h3>
             <p class="workflow__text">Срок прибытия зависит от адреса, трафика и текущей загрузки.</p>
           </li>
           <li class="workflow__item">
             <span class="workflow__number">4</span>
-            <h3 class="workflow__title">Вскрытие и ремонт</h3>
+            <h3 class="workflow__title">Вскрытие и замена</h3>
             <p class="workflow__text">После проверки права доступа выполняется вскрытие, при необходимости замена замка.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="lead-form section" id="lead-form">
+    <section class="lead-form section section--tint" id="lead-form">
       <div class="container lead-form__container">
         <div class="lead-form__content">
           <p class="section__eyebrow">Заявка</p>
@@ -294,7 +282,7 @@
       </div>
     </section>
 
-    <section class="faq section">
+    <section class="faq section" id="faq">
       <div class="container">
         <div class="section__head">
           <p class="section__eyebrow">FAQ</p>
@@ -303,7 +291,7 @@
         <div class="faq__list">
           <details class="faq__item">
             <summary class="faq__question">Сколько стоит вскрытие?</summary>
-            <p class="faq__answer">Цена зависит от типа замка, сложности доступа и состояния механизма. Ориентиры указаны в прайсе, точную стоимость мастер уточняет до начала работ.</p>
+            <p class="faq__answer">Стоимость зависит от типа замка, сложности доступа и состояния механизма. Мастер уточняет условия и согласует порядок работ до начала вскрытия.</p>
           </details>
           <details class="faq__item">
             <summary class="faq__question">Можно ли открыть без повреждений?</summary>
@@ -337,14 +325,31 @@
             <li>Услуги оказываются только при подтверждении права доступа к помещению, автомобилю, сейфу или гаражу.</li>
             <li>В спорных ситуациях мастер вправе отказать в выполнении работ.</li>
             <li>Сроки прибытия зависят от адреса, трафика и текущей загрузки.</li>
-            <li>Цены на сайте ориентировочные и не являются публичной офертой.</li>
+            <li>Условия и порядок работ согласуются до начала выполнения услуги.</li>
+            <li>Информация на сайте не является публичной офертой.</li>
           </ul>
         </div>
       </div>
     </section>
   </main>
 
+  <aside class="messenger-panel" aria-label="Связаться в мессенджерах">
+    <!-- CHANGE_ME: замените ссылки на реальные контакты Telegram, MAX и WhatsApp -->
+    <a class="messenger-panel__link messenger-panel__link--telegram js-messenger-link" href="https://t.me/CHANGE_ME" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram" data-messenger="telegram">TG</a>
+    <a class="messenger-panel__link messenger-panel__link--max js-messenger-link" href="https://max.ru/CHANGE_ME" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX" data-messenger="max">MAX</a>
+    <a class="messenger-panel__link messenger-panel__link--whatsapp js-messenger-link" href="https://wa.me/79990000000" target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp" data-messenger="whatsapp">WA</a>
+  </aside>
+
   <footer class="site-footer">
+    <div class="site-footer__summary container" aria-label="Все услуги кратко">
+      <h2 class="site-footer__summary-title">Все услуги кратко</h2>
+      <ul class="site-footer__summary-list">
+        <li>Вскрытие входных и межкомнатных дверей</li>
+        <li>Вскрытие автомобилей после подтверждения документов</li>
+        <li>Вскрытие сейфов и гаражных замков</li>
+        <li>Замена личинки, ремонт и замена замка после вскрытия</li>
+      </ul>
+    </div>
     <div class="site-footer__inner container">
       <div class="site-footer__brand">
         <a class="site-footer__logo" href="/">Замок СЗАО</a>

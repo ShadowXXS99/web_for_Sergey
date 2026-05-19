@@ -10,6 +10,9 @@ const CONFIG = {
   OGRNIP: '000000000000000', // CHANGE_ME
   FORM_MODE: 'php', // 'php' | 'formspree' | 'google_forms'
   FORM_ENDPOINT: '/send.php', // CHANGE_ME
+  TELEGRAM_URL: 'https://t.me/CHANGE_ME', // CHANGE_ME: публичная ссылка Telegram
+  MAX_URL: 'https://max.ru/CHANGE_ME', // CHANGE_ME: публичная ссылка MAX
+  WHATSAPP_URL: 'https://wa.me/79990000000', // CHANGE_ME: WhatsApp в международном формате
   TELEGRAM_WEBHOOK_URL: 'https://example.com/webhook/telegram', // placeholder, секреты хранить только на сервере
   ATS_WEBHOOK_URL: 'https://example.com/webhook/ats', // Stage 2: интеграция с АТС / авто-SMS, не используется на текущем этапе
   GOOGLE_FORMS_FIELDS: {
@@ -85,9 +88,11 @@ function validateLeadForm(form) {
 
   const consentError = document.getElementById('consent-error');
   consent.setAttribute('aria-invalid', consent.checked ? 'false' : 'true');
+
   if (consentError) {
     consentError.textContent = consent.checked ? '' : 'Нужно согласие на обработку персональных данных.';
   }
+
   if (!consent.checked) {
     isValid = false;
   }
@@ -156,6 +161,16 @@ function initCtaGoals() {
   });
 }
 
+function initMessengerGoals() {
+  document.querySelectorAll('.js-messenger-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      sendGoal('messenger_click', {
+        messenger: link.dataset.messenger || 'unknown'
+      });
+    });
+  });
+}
+
 function initFaqGoals() {
   document.querySelectorAll('.faq__item').forEach((item) => {
     item.addEventListener('toggle', () => {
@@ -217,6 +232,7 @@ function initLeadForm() {
 document.addEventListener('DOMContentLoaded', () => {
   initPhoneGoals();
   initCtaGoals();
+  initMessengerGoals();
   initFaqGoals();
   initLeadForm();
 });
