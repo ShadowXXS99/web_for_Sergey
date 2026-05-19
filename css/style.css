@@ -579,29 +579,20 @@ a:hover {
   place-items: center;
   width: 52px;
   height: 52px;
-  color: #ffffff;
   border-radius: 50%;
   box-shadow: var(--shadow-md);
-  font-size: 13px;
-  font-weight: 900;
   text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .messenger-panel__link:hover {
-  color: #ffffff;
   transform: translateY(-1px);
+  filter: saturate(1.08) contrast(1.04);
 }
 
-.messenger-panel__link--telegram {
-  background: #229ed9;
-}
-
-.messenger-panel__link--max {
-  background: #2563eb;
-}
-
-.messenger-panel__link--whatsapp {
-  background: #16a34a;
+.messenger-panel__link img {
+  width: 52px;
+  height: 52px;
 }
 
 .site-footer {
@@ -872,7 +863,11 @@ a:hover {
   .messenger-panel__link {
     width: 46px;
     height: 46px;
-    font-size: 12px;
+  }
+
+  .messenger-panel__link img {
+    width: 46px;
+    height: 46px;
   }
 }
 

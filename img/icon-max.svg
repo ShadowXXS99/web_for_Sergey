@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" role="img" aria-labelledby="title">
+  <title id="title">MAX</title>
+  <defs>
+    <linearGradient id="maxGradient" x1="8" y1="6" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DA8FF"/>
+      <stop offset="1" stop-color="#6D5BFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="52" height="52" rx="14" fill="url(#maxGradient)"/>
+  <path d="M15 34V18h4.4l6.6 8.1 6.6-8.1H37v16h-5.2v-8l-5.8 7-5.8-7v8H15Z" fill="#fff"/>
+</svg>
