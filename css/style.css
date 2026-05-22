@@ -129,6 +129,7 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   font-weight: 900;
   text-decoration: none;
   white-space: nowrap;
@@ -173,6 +174,40 @@ svg {
   font-weight: 900;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.header-messengers {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.header-messengers a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: #f4faf5;
+  border: 1px solid #d6eadc;
+  border-radius: var(--radius);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.header-messengers a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(22, 130, 79, 0.45);
+}
+
+.header-messengers img {
+  width: 24px;
+  height: 24px;
 }
 
 .hero {
@@ -725,8 +760,8 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  max-width: 760px;
-  padding: 10px;
+  max-width: 430px;
+  padding: 6px;
   margin-inline: auto;
   background: linear-gradient(135deg, #0d6b3f, #159855);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -739,8 +774,9 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 48px;
-  padding: 10px 14px;
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 13px;
   color: #0b3d26;
   background: #ffffff;
   border-radius: var(--radius);
@@ -753,32 +789,6 @@ svg {
   width: 22px;
   height: 22px;
   flex: 0 0 auto;
-}
-
-.bottom-contact__messengers {
-  display: flex;
-  gap: 8px;
-  flex: 0 0 auto;
-}
-
-.bottom-contact__messengers a {
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: var(--radius);
-  transition: transform 0.2s ease;
-}
-
-.bottom-contact__messengers a:hover {
-  transform: translateY(-2px);
-}
-
-.bottom-contact__messengers img {
-  width: 30px;
-  height: 30px;
 }
 
 @media (min-width: 560px) {
@@ -794,7 +804,7 @@ svg {
     width: min(100% - 48px, var(--container));
   }
 
-  .site-nav,
+.site-nav,
   .header-phone {
     display: flex;
   }
@@ -852,8 +862,15 @@ svg {
 }
 
 @media (max-width: 680px) {
+  .brand {
+    gap: 8px;
+    white-space: normal;
+  }
+
   .brand span:last-child {
+    max-width: 165px;
     font-size: 15px;
+    line-height: 1.08;
   }
 
   .site-header__inner {
@@ -910,24 +927,19 @@ svg {
   .map-card__pin--pu { top: 90%; left: 56%; }
 
   .bottom-contact {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 8px;
+    right: 12px;
+    left: 12px;
+    max-width: 360px;
   }
 
   .bottom-contact__phone {
-    width: 100%;
     min-height: 46px;
     padding-inline: 10px;
     font-size: 15px;
   }
 
-  .bottom-contact__messengers {
-    justify-content: center;
-  }
-
   body::after {
-    height: 150px;
+    height: 88px;
   }
 }
 
