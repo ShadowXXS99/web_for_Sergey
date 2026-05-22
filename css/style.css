@@ -22,10 +22,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--text);
   background:
     radial-gradient(circle at 12% 18%, rgba(244, 123, 32, 0.2), transparent 28%),
@@ -1012,9 +1014,11 @@ svg {
   }
 
   .site-header__inner {
-    position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     min-height: 74px;
+    gap: 8px;
   }
 
   .brand__mark {
@@ -1023,31 +1027,28 @@ svg {
   }
 
   .brand {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    position: static;
+    flex: 0 0 50px;
+    z-index: 2;
   }
 
   .header-phone {
-    position: absolute;
-    top: 50%;
-    right: 106px;
-    left: 62px;
-    transform: translateY(-50%);
+    position: static;
+    flex: 1 1 auto;
     min-width: 0;
+    max-width: none;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1;
     text-align: center;
-    text-overflow: clip;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .header-messengers {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    position: static;
+    flex: 0 0 auto;
+    z-index: 2;
     gap: 6px;
   }
 
@@ -1145,7 +1146,7 @@ svg {
   .works-grid,
   .advantages__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: 6px;
   }
 
   .service-item img {
@@ -1199,31 +1200,34 @@ svg {
 
   .advantage-card {
     grid-template-columns: 1fr;
-    place-items: center;
-    gap: 8px;
-    padding: 10px 8px;
-    text-align: center;
+    place-items: center stretch;
+    gap: 7px;
     min-width: 0;
+    padding: 10px 6px;
+    text-align: center;
   }
 
   .advantage-card svg {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     margin-inline: auto;
   }
 
   .advantage-card h3 {
-    font-size: 12px;
+    width: 100%;
+    margin-bottom: 4px;
+    font-size: 11px;
     line-height: 1.15;
-    overflow-wrap: break-word;
-    hyphens: none;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .advantage-card p {
-    font-size: 10px;
-    line-height: 1.25;
-    overflow-wrap: break-word;
-    hyphens: none;
+    width: 100%;
+    font-size: 9px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .work-card {
@@ -1287,9 +1291,7 @@ svg {
 
 @media (max-width: 420px) {
   .header-phone {
-    right: 100px;
-    left: 56px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .brand__mark {
