@@ -147,16 +147,45 @@ svg {
   height: 46px;
   color: #ffffff;
   background:
-    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.28), transparent 32%),
-    linear-gradient(135deg, #0f8b52, #0d5f3d);
+    radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.38), transparent 30%),
+    radial-gradient(circle at 80% 78%, rgba(244, 123, 32, 0.32), transparent 34%),
+    linear-gradient(135deg, #10955a, #095335);
   border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(13, 95, 61, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    0 10px 24px rgba(13, 95, 61, 0.25);
 }
 
 .brand__mark svg {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
+  overflow: visible;
+}
+
+.logo-shackle,
+.logo-body,
+.logo-keyhole {
+  stroke: #ffffff;
+}
+
+.logo-body {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+.logo-keyhole {
+  fill: none;
+  stroke-width: 3;
+}
+
+.logo-pick,
+.logo-spark {
+  stroke: #ff8a2a;
+  stroke-width: 4;
+}
+
+.logo-pick {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.18));
 }
 
 .site-nav {
@@ -1009,10 +1038,6 @@ svg {
     white-space: normal;
   }
 
-  .brand span:last-child {
-    display: none;
-  }
-
   .site-header__inner {
     display: flex;
     align-items: center;
@@ -1022,6 +1047,7 @@ svg {
   }
 
   .brand__mark {
+    display: grid;
     width: 50px;
     height: 50px;
   }
