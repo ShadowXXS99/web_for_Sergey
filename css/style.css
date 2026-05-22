@@ -963,6 +963,18 @@ svg {
 }
 
 @media (max-width: 680px) {
+  .container {
+    width: min(100% - 20px, var(--container));
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .section > .container {
+    padding: 14px;
+  }
+
   .brand {
     gap: 8px;
     white-space: normal;
@@ -1056,7 +1068,7 @@ svg {
 
   .service-items {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
   }
 
   .service-item--wide {
@@ -1066,56 +1078,97 @@ svg {
   .works-grid,
   .advantages__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
   }
 
   .service-item img {
-    width: 54px;
-    height: 70px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.15 / 1;
   }
 
   .service-item span {
-    padding: 9px 24px 9px 0;
+    min-width: 0;
+    padding: 8px 8px 22px;
+    overflow-wrap: anywhere;
+    hyphens: auto;
   }
 
   .service-item {
-    grid-template-columns: 54px 1fr;
-    min-height: 70px;
-    gap: 9px;
-    font-size: 12px;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 0;
+    min-height: 0;
+    font-size: 11px;
+    line-height: 1.2;
   }
 
   .service-item::after {
-    right: 10px;
+    right: 8px;
+    bottom: 8px;
     width: 8px;
     height: 8px;
   }
 
+  .service-group {
+    padding: 14px;
+  }
+
+  .service-group__head {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .service-group__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .service-group__icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
   .advantage-card {
     grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 14px;
+    gap: 8px;
+    padding: 10px 8px;
     text-align: center;
+    min-width: 0;
   }
 
   .advantage-card svg {
+    width: 40px;
+    height: 40px;
     margin-inline: auto;
   }
 
   .advantage-card h3 {
-    font-size: 16px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
   }
 
   .advantage-card p {
-    font-size: 13px;
+    font-size: 11px;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
   }
 
   .work-card {
-    min-height: 180px;
+    min-height: 132px;
   }
 
   .work-card img {
-    min-height: 180px;
+    min-height: 132px;
+  }
+
+  .work-card figcaption {
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+    padding: 7px 8px;
+    font-size: 11px;
+    line-height: 1.15;
   }
 
   .map-card {
