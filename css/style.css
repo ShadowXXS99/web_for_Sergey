@@ -1012,9 +1012,9 @@ svg {
   }
 
   .site-header__inner {
-    grid-template-columns: 56px minmax(0, 1fr) 98px;
-    min-height: 64px;
-    gap: 8px;
+    position: relative;
+    display: block;
+    min-height: 74px;
   }
 
   .brand__mark {
@@ -1022,14 +1022,32 @@ svg {
     height: 50px;
   }
 
+  .brand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
   .header-phone {
+    position: absolute;
+    top: 50%;
+    right: 106px;
+    left: 62px;
+    transform: translateY(-50%);
     min-width: 0;
-    font-size: 20px;
+    overflow: hidden;
+    font-size: 18px;
     line-height: 1;
     text-align: center;
+    text-overflow: clip;
   }
 
   .header-messengers {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     gap: 6px;
   }
 
@@ -1264,6 +1282,24 @@ svg {
 
   body::after {
     height: 92px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-phone {
+    right: 100px;
+    left: 56px;
+    font-size: 16px;
+  }
+
+  .brand__mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .header-messengers a {
+    width: 44px;
+    height: 44px;
   }
 }
 
