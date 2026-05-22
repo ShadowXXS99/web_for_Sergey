@@ -299,6 +299,7 @@ svg {
 
 .question-grid {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin-top: 18px;
 }
@@ -340,6 +341,7 @@ svg {
 
 .hero-services {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   justify-self: center;
 }
@@ -901,8 +903,6 @@ svg {
 }
 
 @media (min-width: 560px) {
-  .question-grid,
-  .hero-services,
   .works-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -916,11 +916,6 @@ svg {
 .site-nav,
   .header-phone {
     display: flex;
-  }
-
-  .question-grid,
-  .hero-services {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .law__box {
@@ -1003,8 +998,47 @@ svg {
     padding: 18px;
   }
 
+  .question-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .question-card {
+    grid-template-columns: 28px 1fr;
+    gap: 8px;
+    min-height: 86px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .question-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .hero-services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 8px;
+  }
+
   .hero-service-card {
-    min-height: 136px;
+    min-height: 118px;
+    padding: 12px 8px;
+    border-radius: 16px;
+  }
+
+  .hero-service-card svg {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+  }
+
+  .hero-service-card span {
+    font-size: 13px;
+    line-height: 1.15;
   }
 
   .faq-list {
@@ -1020,18 +1054,68 @@ svg {
     padding: 0 18px 18px 40px;
   }
 
-  .service-item {
-    grid-template-columns: 64px 1fr;
-    min-height: 78px;
+  .service-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .service-item--wide {
+    grid-column: span 3;
+  }
+
+  .works-grid,
+  .advantages__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .service-item img {
-    width: 64px;
-    height: 78px;
+    width: 54px;
+    height: 70px;
   }
 
   .service-item span {
-    padding-right: 26px;
+    padding: 9px 24px 9px 0;
+  }
+
+  .service-item {
+    grid-template-columns: 54px 1fr;
+    min-height: 70px;
+    gap: 9px;
+    font-size: 12px;
+  }
+
+  .service-item::after {
+    right: 10px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .advantage-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+
+  .advantage-card svg {
+    margin-inline: auto;
+  }
+
+  .advantage-card h3 {
+    font-size: 16px;
+  }
+
+  .advantage-card p {
+    font-size: 13px;
+  }
+
+  .work-card {
+    min-height: 180px;
+  }
+
+  .work-card img {
+    min-height: 180px;
   }
 
   .map-card {
