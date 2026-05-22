@@ -22,4 +22,24 @@ function initAnalyticsLinks() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', initAnalyticsLinks);
+function initFaqAccordion() {
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const button = item.querySelector('.faq-item__question');
+    const answer = item.querySelector('.faq-item__answer');
+
+    if (!button || !answer) {
+      return;
+    }
+
+    button.addEventListener('click', () => {
+      const isOpen = item.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      answer.setAttribute('aria-hidden', String(!isOpen));
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initAnalyticsLinks();
+  initFaqAccordion();
+});

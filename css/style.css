@@ -25,10 +25,13 @@ html {
 }
 
 body {
+  min-width: 1200px;
   margin: 0;
   color: var(--text);
   background:
-    linear-gradient(180deg, #f7fbf4 0%, #ffffff 38%, #f6f8f4 100%);
+    radial-gradient(circle at 8% 18%, rgba(244, 123, 32, 0.09), transparent 30%),
+    radial-gradient(circle at 92% 36%, rgba(22, 130, 79, 0.12), transparent 32%),
+    linear-gradient(180deg, #f2f7ee 0%, #fff8ed 44%, #eef7f1 100%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -242,10 +245,13 @@ svg {
 .hero__inner {
   display: grid;
   gap: 28px;
+  justify-items: center;
+  text-align: center;
 }
 
 .hero__content {
   max-width: 850px;
+  margin-inline: auto;
 }
 
 .hero__tag,
@@ -265,12 +271,6 @@ svg {
   letter-spacing: 0;
 }
 
-.hero h1 span {
-  display: block;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
 .hero__lead {
   max-width: 660px;
   margin: 22px 0 0;
@@ -280,6 +280,7 @@ svg {
 
 .problem-panel {
   max-width: 980px;
+  margin-inline: auto;
   padding: 22px;
   background: rgba(8, 12, 10, 0.48);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -313,12 +314,20 @@ svg {
   background: rgba(255, 255, 255, 0.09);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
+  text-align: left;
 }
 
-.question-card svg {
+.question-icon {
+  display: grid;
+  place-items: center;
   width: 32px;
   height: 32px;
   color: var(--orange);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 950;
+  line-height: 1;
 }
 
 .hero__callout {
@@ -332,6 +341,7 @@ svg {
 .hero-services {
   display: grid;
   gap: 14px;
+  justify-self: center;
 }
 
 .hero-service-card {
@@ -369,11 +379,12 @@ svg {
 .warning-band {
   padding: 24px 0;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--orange), #d95a12);
+  background: linear-gradient(135deg, #de6a1c, #138151);
 }
 
 .warning-band strong {
   display: block;
+  text-align: center;
   font-size: clamp(22px, 4vw, 34px);
   line-height: 1.2;
 }
@@ -382,10 +393,18 @@ svg {
   padding: 72px 0;
 }
 
+.section-head {
+  max-width: 820px;
+  margin-right: auto;
+  margin-bottom: 32px;
+  margin-left: auto;
+  text-align: center;
+}
+
 .law {
   background:
-    radial-gradient(circle at 90% 8%, rgba(244, 123, 32, 0.16), transparent 28%),
-    linear-gradient(135deg, #ffffff 0%, #edf8ef 100%);
+    radial-gradient(circle at 90% 8%, rgba(244, 123, 32, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(255, 250, 241, 0.86) 0%, rgba(237, 248, 239, 0.9) 100%);
 }
 
 .law__box {
@@ -397,12 +416,13 @@ svg {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+  text-align: center;
 }
 
 .law p,
 .section-head p {
   max-width: 780px;
-  margin: 12px 0 0;
+  margin: 12px auto 0;
   color: var(--muted);
   font-size: 18px;
 }
@@ -419,6 +439,7 @@ svg {
   font-size: 17px;
   font-weight: 800;
   line-height: 1.35;
+  text-align: left;
 }
 
 .law__note svg {
@@ -429,11 +450,8 @@ svg {
 }
 
 .advantages {
-  background: #fbfdf9;
-}
-
-.section-head {
-  margin-bottom: 32px;
+  background:
+    linear-gradient(180deg, rgba(239, 247, 241, 0.92), rgba(255, 249, 238, 0.76));
 }
 
 .section-head--center {
@@ -449,6 +467,7 @@ svg {
 .badges {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
@@ -508,9 +527,9 @@ svg {
 
 .services {
   background:
-    radial-gradient(circle at 5% 10%, rgba(22, 130, 79, 0.12), transparent 32%),
-    radial-gradient(circle at 95% 15%, rgba(244, 123, 32, 0.13), transparent 28%),
-    #ffffff;
+    radial-gradient(circle at 5% 10%, rgba(22, 130, 79, 0.11), transparent 32%),
+    radial-gradient(circle at 95% 15%, rgba(244, 123, 32, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 253, 247, 0.88), rgba(239, 247, 241, 0.9));
 }
 
 .service-list {
@@ -533,8 +552,10 @@ svg {
 .service-group__head {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin-bottom: 18px;
+  text-align: left;
 }
 
 .service-group__icon {
@@ -607,7 +628,8 @@ svg {
 }
 
 .works {
-  background: #f7faf5;
+  background:
+    linear-gradient(180deg, rgba(239, 247, 241, 0.9), rgba(255, 248, 237, 0.82));
 }
 
 .works-grid {
@@ -653,8 +675,8 @@ svg {
 
 .faq {
   background:
-    radial-gradient(circle at 10% 0%, rgba(22, 130, 79, 0.1), transparent 30%),
-    linear-gradient(180deg, #f7fafc 0%, #eef7f3 100%);
+    radial-gradient(circle at 10% 0%, rgba(22, 130, 79, 0.09), transparent 30%),
+    linear-gradient(180deg, rgba(239, 247, 243, 0.9) 0%, rgba(255, 249, 239, 0.82) 100%);
 }
 
 .faq .section-head {
@@ -665,6 +687,7 @@ svg {
   display: grid;
   gap: 18px;
   max-width: 980px;
+  margin-inline: auto;
 }
 
 .faq-item {
@@ -675,26 +698,26 @@ svg {
   box-shadow: 0 16px 34px rgba(34, 54, 43, 0.08);
 }
 
-.faq-item summary {
+.faq-item__question {
   position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
   min-height: 72px;
+  width: 100%;
   padding: 20px 24px;
   color: #101820;
+  background: transparent;
+  border: 0;
   font-size: clamp(19px, 2.5vw, 24px);
   font-weight: 950;
   line-height: 1.25;
+  font-family: inherit;
+  text-align: left;
   cursor: pointer;
-  list-style: none;
 }
 
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::before {
+.faq-item__question::before {
   content: "";
   width: 0;
   height: 0;
@@ -705,8 +728,26 @@ svg {
   transition: transform 0.2s ease;
 }
 
-.faq-item[open] summary::before {
+.faq-item.is-open .faq-item__question::before {
   transform: rotate(90deg);
+}
+
+.faq-item__answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  opacity: 0;
+  transition: grid-template-rows 0.32s ease, opacity 0.24s ease;
+}
+
+.faq-item__answer > p {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.faq-item.is-open .faq-item__answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
 
 .faq-item p {
@@ -718,8 +759,7 @@ svg {
 
 .area {
   background:
-    linear-gradient(180deg, rgba(255, 240, 223, 0.86), rgba(228, 245, 234, 0.72)),
-    #ffffff;
+    linear-gradient(180deg, rgba(255, 242, 224, 0.76), rgba(228, 245, 234, 0.8));
 }
 
 .map-card {
