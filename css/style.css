@@ -651,6 +651,71 @@ svg {
   backdrop-filter: blur(10px);
 }
 
+.faq {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(22, 130, 79, 0.1), transparent 30%),
+    linear-gradient(180deg, #f7fafc 0%, #eef7f3 100%);
+}
+
+.faq .section-head {
+  max-width: 760px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+  max-width: 980px;
+}
+
+.faq-item {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e4ece8;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 34px rgba(34, 54, 43, 0.08);
+}
+
+.faq-item summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 72px;
+  padding: 20px 24px;
+  color: #101820;
+  font-size: clamp(19px, 2.5vw, 24px);
+  font-weight: 950;
+  line-height: 1.25;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  flex: 0 0 auto;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 11px solid #101820;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 24px 22px 45px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
 .area {
   background:
     linear-gradient(180deg, rgba(255, 240, 223, 0.86), rgba(228, 245, 234, 0.72)),
@@ -889,6 +954,19 @@ svg {
 
   .hero-service-card {
     min-height: 136px;
+  }
+
+  .faq-list {
+    gap: 14px;
+  }
+
+  .faq-item summary {
+    min-height: 66px;
+    padding: 18px;
+  }
+
+  .faq-item p {
+    padding: 0 18px 18px 40px;
   }
 
   .service-item {
