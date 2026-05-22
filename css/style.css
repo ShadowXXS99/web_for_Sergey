@@ -923,12 +923,24 @@ svg {
   font-size: 18px;
   font-weight: 950;
   text-decoration: none;
+  text-align: center;
 }
 
 .bottom-contact__phone svg {
   width: 24px;
   height: 24px;
   flex: 0 0 auto;
+}
+
+.bottom-contact__text {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  line-height: 1.15;
+}
+
+.bottom-contact__text strong {
+  font-size: 1.08em;
 }
 
 @media (min-width: 560px) {
